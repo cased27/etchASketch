@@ -1,0 +1,54 @@
+body {
+	min-height: 100vh;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	background-image: url("pinkFlowers.jpg");
+	background-size: cover;
+}
+
+canvas {
+	border: 10px solid black;
+	border-radius: 10px;
+	/* Set the width and height to half the actual size so it doesn't look pixelated */
+	width: 800px;
+	height: 500px;
+	background: white;
+}
+
+button.shake {
+	border: 2px solid white;
+	border-radius: 5px;
+	background: black;
+	color: white;
+	width: auto;
+	height: auto;
+	justify-content: center;
+}
+
+canvas.shake {
+	animation: shake 0.5s linear 1;
+}
+
+@keyframes shake {
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
